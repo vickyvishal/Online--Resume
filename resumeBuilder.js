@@ -28,21 +28,21 @@ var education = {
 	"schools" : [
 		{
 		"name" : "Institute of Technical and Education Research",
-		"city" : "Bhubaneswar",
+		"location" : "Bhubaneswar",
 		"date" : "2012-2016",
 		"degree" : "Bachelor in Technology",
 		"major" : "Computer Science and Engineering"
 		},
 		{
 		"name" : "Bhagya College of Science",
-		"city" : "Bhubaneswar",
+		"location" : "Bhubaneswar",
 		"date" : "2009-2011",
 		"degree": "CHSE",
 		"major" : "Science"
 		},
 		{
 		"name" : "St Vincents Convent School",
-		"city" : "Berhampur",
+		"location" : "Berhampur",
 		"date" : "Passed 2009",
 		"degree" : "CISCE",
 		"major" : "Science"
@@ -63,7 +63,7 @@ var work = {
 		{
 		"employer" : "Directi",
 		"title" : "Application Support Specialist",
-		"worklocation" : "Bangalore, Karnataka, IN",
+		"location" : "Bangalore",
 		"dates" : "26th June to 01st December",
 		"description" : "Trobuleshooting the ios and android app. Taking queries from end customer and solving it. Queries include payment gateway failure, balance mismatch, product support."
 		},
@@ -71,7 +71,7 @@ var work = {
 		{
 		"employer" : "Defacto",
 		"title" : "QuizMaster",
-		"worklocation" : "Bhubaneswar, Odisha, IN",
+		"location" : "Bhubaneswar",
 		"dates" : "1st June 2014 to 1st August 2015",
 		"description" : "Organize General quiz. Prepare awesome question which has awesome answers. Make the quiz session as interactive as possible."
 		}]
@@ -142,7 +142,7 @@ function displayWork() {
 		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
 		$('.work-entry:last').append(formattedEmployerTitle);
-		var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].worklocation);
+		var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
 		$('.work-entry:last').append(formattedLocation);
 		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
 		$('.work-entry:last').append(formattedDates);
@@ -197,7 +197,7 @@ function displayeducation() {
 	$("#education").append(HTMLschoolStart);
 	var formattedschoolName = HTMLschoolName.replace("%data%", education.schools[edu].name);
 	$(".education-entry:last").append(formattedschoolName);
-	var formattedschoolCity = HTMLschoolLocation.replace("%data%", education.schools[edu].city);
+	var formattedschoolCity = HTMLschoolLocation.replace("%data%", education.schools[edu].location);
 	$(".education-entry:last").append(formattedschoolCity);
 	var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.schools[edu].degree);
 	$(".education-entry:last").append(formattedschoolDegree);
@@ -225,4 +225,4 @@ function displayonline(){
 displayonline(); 
 
 
-$("mapDiv").append(googleMap);
+$("#mapDiv").append(googleMap);
